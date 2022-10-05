@@ -9,6 +9,7 @@ import { Task1Component } from './features/task1/task1.component';
 import { Task2Component } from './features/task2/task2.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { CustomTextInputComponent } from './components/custom-text-input/custom-text-input.component';
+import { MainButtonComponent } from './components/main-button/main-button.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CustomTextInputComponent } from './components/custom-text-input/custom-
     Task1Component,
     Task2Component,
     NavigationComponent,
-    CustomTextInputComponent
+    CustomTextInputComponent,
+    MainButtonComponent
   ],
   imports: [
     BrowserModule,
