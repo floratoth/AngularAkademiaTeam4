@@ -8,6 +8,7 @@ import { LoginComponent } from './features/login/login.component';
 import { Task1Component } from './features/task1/task1.component';
 import { Task2Component } from './features/task2/task2.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { CustomTextInputComponent } from './components/custom-text-input/custom-text-input.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     LoginComponent,
     Task1Component,
     Task2Component,
-    NavigationComponent
+    NavigationComponent,
+    CustomTextInputComponent
   ],
   imports: [
     BrowserModule,
