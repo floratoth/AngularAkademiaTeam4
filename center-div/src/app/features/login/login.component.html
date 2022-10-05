@@ -1,9 +1,17 @@
 <div class="form-container">
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <label for="">Email</label>
-    <input type="text">
+    <app-custom-text-input
+    type="text"></app-custom-text-input>
     <label for="">Password</label>
-    <input type="text">
+    <app-custom-text-input
+    type="password"></app-custom-text-input>
     <button type="submit">Login</button>
+
+    <div class="link-container">
+      <span class="link">No account yet?</span>
+      <a href="/">Register</a>
+    </div>
+
   </form>
 </div>
