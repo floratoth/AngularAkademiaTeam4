@@ -2,11 +2,14 @@
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <label for="">Email</label>
     <app-custom-text-input
-    type="text"
+    [control]="email"
+    [type]="'text'"
     ></app-custom-text-input>
+
     <label for="">Password</label>
     <app-custom-text-input
-    type="password"></app-custom-text-input>
+    [control]="password"
+    [type]="'password'"></app-custom-text-input>
     <button type="submit">Login</button>
 
     <div class="link-container">
