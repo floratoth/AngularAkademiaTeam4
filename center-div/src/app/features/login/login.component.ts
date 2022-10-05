@@ -30,9 +30,11 @@ export class LoginComponent implements OnInit {
     this.loginForm.setErrors({
       invalidLogin: true,
     });
+    console.log(this.loginForm);
+
   }
 
   onSubmit(): void {
-    console.log(this.loginForm.value);
+    this.login();
   }
 }
