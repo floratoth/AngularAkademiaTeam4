@@ -18,7 +18,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  
+  login() {
+    this.loginForm.setErrors({
+      invalidLogin: true,
+    });
+  }
 
   onSubmit(): void {
     console.log(this.loginForm.value);
