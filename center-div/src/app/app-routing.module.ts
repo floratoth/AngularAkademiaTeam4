@@ -4,6 +4,7 @@ import { HomeComponent } from './features/home/home.component';
 import { LoginComponent } from './features/login/login.component';
 import { Task1Component } from './features/task1/task1.component';
 import { Task2Component } from './features/task2/task2.component';
+import { AlreadyAuthGuard } from './guards/already-auth.guard';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -11,6 +12,11 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'task1',
+      },
       {
         path: 'task1',
         component: Task1Component,
@@ -25,6 +31,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+    canActivate: [AlreadyAuthGuard],
+  },
+  {
+    path: '**',
+    redirectTo: '',
   },
 ];
 
