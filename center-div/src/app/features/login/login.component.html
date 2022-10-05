@@ -4,18 +4,23 @@
     <app-custom-text-input
     [control]="email"
     [type]="'text'"
+    [placeHolder]="'Email'"
     ></app-custom-text-input>
 
     <label for="">Password</label>
     <app-custom-text-input
     [control]="password"
-    [type]="'password'"></app-custom-text-input>
+    [type]="'password'"
+    [placeHolder]="'Password'"
+    ></app-custom-text-input>
     <button type="submit">Login</button>
 
     <div class="link-container">
       <span class="link">No account yet?</span>
       <a href="/">Register</a>
     </div>
-
+    <div *ngIf="loginForm.hasError('invalidLogin')">
+      <small>Incorrect email or password!</small>
+    </div>
   </form>
 </div>

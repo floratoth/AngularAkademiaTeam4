@@ -1,5 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +16,17 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor(
+    fb: FormBuilder,
+    private authService: AuthenticationService,
+    private router: Router
+  ) {
     this.loginForm = fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
+    console.log();
+
   }
 
   ngOnInit(): void {}
@@ -26,15 +39,15 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('password') as FormControl;
   }
 
-  login() {
-    this.loginForm.setErrors({
-      invalidLogin: true
-    });
-    console.log(this.loginForm);
-
-  }
-
   onSubmit(): void {
-    this.login();
+    if (
+      this.authService.checkLoginData(this.email.value, this.password.value)
+    ) {
+      this.router.navigate(['/task1']);
+    } else {
+      this.loginForm.setErrors({
+        invalidLogin: true,
+      });
+    }
   }
 }
