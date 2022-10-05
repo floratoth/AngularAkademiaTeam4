@@ -7,6 +7,7 @@ import { HomeComponent } from './features/home/home.component';
 import { LoginComponent } from './features/login/login.component';
 import { Task1Component } from './features/task1/task1.component';
 import { Task2Component } from './features/task2/task2.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { Task2Component } from './features/task2/task2.component';
     HomeComponent,
     LoginComponent,
     Task1Component,
-    Task2Component
+    Task2Component,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
