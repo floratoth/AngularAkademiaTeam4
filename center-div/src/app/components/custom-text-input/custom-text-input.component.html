@@ -1,7 +1,9 @@
 <div>
   <div class="form-group">
     <input
-    [type]="type"/>
+    [type]="type"
+    [formControl]="control"/>
   </div>
-  <div class=" alert alert-danger">The field is required</div>
+  <div *ngIf="" class=" alert alert-danger">The field is required</div>
+
 </div>
