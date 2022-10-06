@@ -6,7 +6,32 @@ import { INote } from '../interfaces/note.interface';
   providedIn: 'root',
 })
 export class NoteService {
-  noteList$: BehaviorSubject<INote[]> = new BehaviorSubject<INote[]>([]);
+  noteList$: BehaviorSubject<INote[]> = new BehaviorSubject<INote[]>([
+    {
+      id: 0,
+      content: 'adsadsadsadsadsa',
+      color: 'red',
+      create_at: '2022-01-01',
+    },
+    {
+      id: 1,
+      content: 'adsadsdadsafdfasfcxycdsadsa',
+      color: 'orange',
+      create_at: '2022-01-01',
+    },
+    {
+      id: 2,
+      content: 'adsadsadsadfdcxya dsadsa sadsa',
+      color: 'blue',
+      create_at: '2022-01-01',
+    },
+    {
+      id: 3,
+      content: 'adsadsadsadsdsadsad  dsdwqewq  sadsa',
+      color: 'green',
+      create_at: '2022-01-01',
+    },
+  ]);
 
   constructor() {}
 
@@ -15,5 +40,4 @@ export class NoteService {
     notes.push(note);
     this.noteList$.next(notes);
   }
-
 }
