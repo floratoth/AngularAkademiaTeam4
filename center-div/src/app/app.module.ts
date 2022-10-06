@@ -12,6 +12,9 @@ import { CustomTextInputComponent } from './components/custom-text-input/custom-
 import { MainButtonComponent } from './components/main-button/main-button.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreationalFormComponent } from './components/creational-form/creational-form.component';
+import { StickNoteComponent } from './components/stick-note/stick-note.component';
+import { StickNoteContainerComponent } from './components/stick-note-container/stick-note-container.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     Task2Component,
     NavigationComponent,
     CustomTextInputComponent,
-    MainButtonComponent
+    MainButtonComponent,
+    CreationalFormComponent,
+    StickNoteComponent,
+    StickNoteContainerComponent
   ],
   imports: [
     BrowserModule,
