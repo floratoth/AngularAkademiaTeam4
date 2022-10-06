@@ -12,13 +12,11 @@ import { CustomTextInputComponent } from './components/custom-text-input/custom-
 import { MainButtonComponent } from './components/main-button/main-button.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-<<<<<<< HEAD
-import { CustomButtonComponent } from './components/custom-button/custom-button.component';
-=======
+
 import { CreationalFormComponent } from './components/creational-form/creational-form.component';
 import { StickNoteComponent } from './components/stick-note/stick-note.component';
 import { StickNoteContainerComponent } from './components/stick-note-container/stick-note-container.component';
->>>>>>> 3d212a344442b9ea2ff3f0c04f912bc2f9d64713
+import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 
 @NgModule({
   declarations: [
@@ -30,21 +28,13 @@ import { StickNoteContainerComponent } from './components/stick-note-container/s
     NavigationComponent,
     CustomTextInputComponent,
     MainButtonComponent,
-<<<<<<< HEAD
-    CustomButtonComponent
-=======
+    CustomButtonComponent,
     CreationalFormComponent,
     StickNoteComponent,
-    StickNoteContainerComponent
->>>>>>> 3d212a344442b9ea2ff3f0c04f912bc2f9d64713
+    StickNoteContainerComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
