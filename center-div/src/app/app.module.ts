@@ -16,7 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CreationalFormComponent } from './components/creational-form/creational-form.component';
 import { StickNoteComponent } from './components/stick-note/stick-note.component';
 import { StickNoteContainerComponent } from './components/stick-note-container/stick-note-container.component';
-import { CustomButtonComponent } from './components/custom-button/custom-button.component';
+import { CustomButtonComponent } from './components/custom-button/custom-button.component'
 
 @NgModule({
   declarations: [
