@@ -17,6 +17,8 @@ import { CreationalFormComponent } from './components/creational-form/creational
 import { StickNoteComponent } from './components/stick-note/stick-note.component';
 import { StickNoteContainerComponent } from './components/stick-note-container/stick-note-container.component';
 import { CustomButtonComponent } from './components/custom-button/custom-button.component'
+import { HomeNotesComponent } from './features/notes/home-notes/home-notes.component';
+import { NewNoteComponent } from './features/notes/new-note/new-note.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { CustomButtonComponent } from './components/custom-button/custom-button.
     CreationalFormComponent,
     StickNoteComponent,
     StickNoteContainerComponent,
+    HomeNotesComponent,
+    NewNoteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
