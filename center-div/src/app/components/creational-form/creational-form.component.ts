@@ -5,6 +5,9 @@ import {
   Validators,
   FormControl,
 } from '@angular/forms';
+import { Router } from '@angular/router';
+import { INote } from 'src/app/interfaces/note.interface';
+import { NoteService } from 'src/app/services/note.service';
 
 @Component({
   selector: 'app-creational-form',
@@ -14,10 +17,14 @@ import {
 export class CreationalFormComponent implements OnInit {
   noteForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private noteService: NoteService,
+    private router: Router
+  ) {
     this.noteForm = fb.group({
       content: ['', [Validators.required]],
-      color: ['', [Validators.required]],
+      color: ['#ea2a2a', [Validators.required]],
     });
   }
 
@@ -29,7 +36,20 @@ export class CreationalFormComponent implements OnInit {
   }
 
   handleSubmit() {
-    console.log(this.noteForm);
+    if (this.noteForm.valid) {
+      let note: INote = {
+        color: this.color.getRawValue(),
+        content: this.content.getRawValue(),
+        create_at: new Date().toISOString().split('T')[0],
+      };
+      console.log(note);
+
+      this.noteService.addNote(note);
+
+      this.router.navigate(['/notes']);
+    } else {
+      this.noteForm.markAllAsTouched();
+    }
   }
   ngOnInit(): void {}
 }
