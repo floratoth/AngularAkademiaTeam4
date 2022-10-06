@@ -19,6 +19,7 @@ import { StickNoteContainerComponent } from './components/stick-note-container/s
 import { CustomButtonComponent } from './components/custom-button/custom-button.component'
 import { HomeNotesComponent } from './features/notes/home-notes/home-notes.component';
 import { NewNoteComponent } from './features/notes/new-note/new-note.component';
+import { CustomColorInputComponent } from './components/custom-color-input/custom-color-input.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { NewNoteComponent } from './features/notes/new-note/new-note.component';
     StickNoteContainerComponent,
     HomeNotesComponent,
     NewNoteComponent,
+    CustomColorInputComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
