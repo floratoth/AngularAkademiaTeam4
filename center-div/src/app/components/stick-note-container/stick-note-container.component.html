@@ -1,15 +1,7 @@
-<!-- <div *ngFor="let note of noteList">
-  <p>{{ note?.id }}</p>
-  <p>{{ note.content }}</p>
-  <p>{{ note?.create_at }}</p>
-</div> -->
-
-
 <div class="note-container">
   <div class="item" *ngFor="let note of noteList$ | async">
     <app-stick-note
     [note]="note"
     ></app-stick-note>
   </div>
-
 </div>

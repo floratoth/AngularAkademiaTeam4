@@ -14,8 +14,6 @@ export class StickNoteContainerComponent implements OnInit {
     this.noteList$ = noteService.noteList$
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
 }
