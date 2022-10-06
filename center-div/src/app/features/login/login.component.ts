@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required]],
     });
     console.log();
-
   }
 
   ngOnInit(): void {}
@@ -43,7 +42,7 @@ export class LoginComponent implements OnInit {
     if (
       this.authService.checkLoginData(this.email.value, this.password.value)
     ) {
-      this.router.navigate(['/task1']);
+      this.router.navigate(['']);
     } else {
       this.loginForm.setErrors({
         invalidLogin: true,

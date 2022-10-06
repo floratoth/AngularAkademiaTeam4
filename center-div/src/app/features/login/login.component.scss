@@ -13,4 +13,10 @@ form {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container, .input-container {
+  width: 50%;
 }

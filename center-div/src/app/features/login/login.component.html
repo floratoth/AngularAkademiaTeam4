@@ -1,19 +1,24 @@
 <div class="form-container">
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <label for="">Email</label>
-    <app-custom-text-input
-    [control]="email"
-    [type]="'text'"
-    [placeHolder]="'Email'"
-    ></app-custom-text-input>
+    <div class="input-container">
+      <label for="">Email</label>
+      <app-custom-text-input
+        [control]="email"
+        [type]="'text'"
+        [placeHolder]="'Email'"
+      ></app-custom-text-input>
 
-    <label for="">Password</label>
-    <app-custom-text-input
-    [control]="password"
-    [type]="'password'"
-    [placeHolder]="'Password'"
-    ></app-custom-text-input>
-    <button type="submit">Login</button>
+      <label for="">Password</label>
+      <app-custom-text-input
+        [control]="password"
+        [type]="'password'"
+        [placeHolder]="'Password'"
+      ></app-custom-text-input>
+    </div>
+
+    <div class="button-container">
+      <app-main-button></app-main-button>
+    </div>
 
     <div class="link-container">
       <span class="link">No account yet?</span>
