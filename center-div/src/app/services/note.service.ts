@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { INote } from '../interfaces/note.interface';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NoteService {
-  noteList: string[] = [
-    'I am a sticky note!',
-    'Short sticky',
-    'I am a very very very very very very very long sticky note',
-    'Another boring sticky note for today',
-  ];
+  noteListSubject: BehaviorSubject<INote[]> = new BehaviorSubject<INote[]>([]);
 
   constructor() {}
+
+
 }
