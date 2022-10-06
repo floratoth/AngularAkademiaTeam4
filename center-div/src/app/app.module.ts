@@ -12,6 +12,7 @@ import { CustomTextInputComponent } from './components/custom-text-input/custom-
 import { MainButtonComponent } from './components/main-button/main-button.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     Task2Component,
     NavigationComponent,
     CustomTextInputComponent,
-    MainButtonComponent
+    MainButtonComponent,
+    CustomButtonComponent
   ],
   imports: [
     BrowserModule,

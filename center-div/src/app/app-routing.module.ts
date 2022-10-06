@@ -27,11 +27,13 @@ const routes: Routes = [
       },
     ],
     canActivate: [AuthGuard],
+    runGuardsAndResolvers: 'always',
   },
   {
     path: 'login',
     component: LoginComponent,
     canActivate: [AlreadyAuthGuard],
+    runGuardsAndResolvers: 'always',
   },
   {
     path: '**',

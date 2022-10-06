@@ -11,6 +11,7 @@ import { AuthenticationService } from '../services/authentication.service';
 
 @Injectable({
   providedIn: 'root',
+  
 })
 export class AlreadyAuthGuard implements CanActivate {
   constructor(

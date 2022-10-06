@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class AuthenticationService {
-  isLogedIn: boolean = false;
+  isLogedIn: boolean = true;
   email: string = 'email@email.com';
   password: string = 'password';
 
@@ -17,5 +17,8 @@ export class AuthenticationService {
   checkLoginData(email: string, password: string): boolean {
     this.isLogedIn = this.email === email && this.password === password;
     return this.email === email && this.password === password;
+  }
+  logout() {
+    this.isLogedIn = false;
   }
 }
