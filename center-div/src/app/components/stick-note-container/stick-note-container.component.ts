@@ -9,15 +9,13 @@ import { NoteService } from 'src/app/services/note.service';
   styleUrls: ['./stick-note-container.component.scss']
 })
 export class StickNoteContainerComponent implements OnInit {
-  noteList?: INote[];
-
+  noteList$:Observable<INote[]>
   constructor(private noteService: NoteService) {
+    this.noteList$ = noteService.noteList$
   }
 
   ngOnInit(): void {
-    this.noteService.noteList$.subscribe((data) => {
-      this.noteList = data;
-    })
+
   }
 
 }
