@@ -6,9 +6,12 @@
         [placeHolder]="'Create note'"
       ></app-custom-text-input>
     </div>
+    <div class="create-text-input">
+      <app-custom-color-input
+      [control]="color"
+      [label]="'pick a color'"></app-custom-color-input>
+    </div>
     <div class="create-text-button">
-      <div class="create-text-input">
-      </div>
       <app-main-button>Create note</app-main-button>
     </div>
   </form>
