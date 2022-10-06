@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { NoteService } from 'src/app/services/note.service';
 
 @Component({
   selector: 'app-stick-note-container',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StickNoteContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private noteService: NoteService) {
+  }
 
   ngOnInit(): void {
   }
