@@ -1,4 +1,4 @@
-<div *ngStyle="{ backgroundColor: note.color }">
+<div [ngStyle]="{ backgroundColor: note.color }">
   <p>{{ note.content }}</p>
   <span>{{ note.create_at }}</span>
 </div>
