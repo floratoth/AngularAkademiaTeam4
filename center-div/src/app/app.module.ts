@@ -20,6 +20,7 @@ import { CustomButtonComponent } from './components/custom-button/custom-button.
 import { HomeNotesComponent } from './features/notes/home-notes/home-notes.component';
 import { NewNoteComponent } from './features/notes/new-note/new-note.component';
 import { CustomColorInputComponent } from './components/custom-color-input/custom-color-input.component';
+import { AddStickyNoteComponent } from './components/add-sticky-note/add-sticky-note.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { CustomColorInputComponent } from './components/custom-color-input/custo
     HomeNotesComponent,
     NewNoteComponent,
     CustomColorInputComponent,
+    AddStickyNoteComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
