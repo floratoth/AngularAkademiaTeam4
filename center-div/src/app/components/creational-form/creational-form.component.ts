@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-creational-form',
   templateUrl: './creational-form.component.html',
-  styleUrls: ['./creational-form.component.scss']
+  styleUrls: ['./creational-form.component.scss'],
 })
 export class CreationalFormComponent implements OnInit {
+  @Input() placeHolder?: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
