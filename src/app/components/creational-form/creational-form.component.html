@@ -1,5 +1,5 @@
 <div class="create-form">
-  <form [formGroup]="noteForm" (ngSubmit)="handleSubmit()" class="form-create">
+  <form class="form-create" [formGroup]="noteForm" (ngSubmit)="handleSubmit()">
     <div class="create-text-input">
       <app-custom-text-input
         [control]="content"
